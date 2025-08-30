@@ -6,6 +6,10 @@ public class ConstantGeneralMessage {
 
     public static final String SENDING_SMS_TO = "Sending SMS to ";
     public static final Object ERROR_SENDING_SMS = "Error sending SMS";
+    public static final String CONSTANT_HEADER_AUTHENTICATION = "Authorization";
+    public static final String BEARER_PREFIX = "Bearer ";
+    public static final int BEARER_SUBSTRING = 7;
+    public static final String ERROR_PROCESS_TOKEN = "Error processing token";
 
     public ConstantGeneralMessage(){}
 }
