@@ -9,10 +9,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Rol {
-    private Long idRol;
-    private String nameRol;
-    private String descriptionRol;
+public class Notification {
+    private String phoneNumber;
+    private String message;
+    private String pin;
+    private boolean isSent;
 }
-
-
