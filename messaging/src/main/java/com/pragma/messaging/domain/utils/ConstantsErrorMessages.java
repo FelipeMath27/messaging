@@ -17,6 +17,7 @@ public class ConstantsErrorMessages {
 
     public static final String ERROR_TO_SEND_SMS = "There was an error sending the SMS";
     public static final String SMS_SENT_SUCCESSFULLY = "SMS sent successfully";
+    public static final String YOUR_ORDER_IS_READY = "Your order is ready. Use the following PIN to collect it: ";
 
     private ConstantsErrorMessages() {
     }
