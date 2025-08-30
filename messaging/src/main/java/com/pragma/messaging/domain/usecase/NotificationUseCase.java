@@ -16,11 +16,10 @@ public class NotificationUseCase implements INotificationServicePort {
 
     @Override
     public Notification sendNotification(Notification notification) {
-        isSent = iTwilioPort.sendSMS(notification);
-        notification.setSent(isSent);
         String pin = PinGenerator.generatePin(notification.getPhoneNumber());
         notification.setPin(pin);
-        notification.setMessage(ConstantsErrorMessages.YOUR_ORDER_IS_READY + " your pin is:" + pin);
+        notification.setMessage(ConstantsErrorMessages.YOUR_ORDER_IS_READY + " " + notification.getPin());
+        isSent = iTwilioPort.sendSMS(notification);
         return notification;
     }
 }
