@@ -3,6 +3,7 @@ package com.pragma.messaging.infrastructure.configuration;
 
 import com.pragma.messaging.domain.SMS.ITwilioPort;
 import com.pragma.messaging.domain.api.INotificationServicePort;
+import com.pragma.messaging.domain.spi.INotificationPersistencePort;
 import com.pragma.messaging.domain.usecase.NotificationUseCase;
 import io.github.cdimascio.dotenv.Dotenv;
 import jakarta.annotation.PostConstruct;
@@ -26,7 +27,7 @@ public class BeanConfiguration {
     }
 
     @Bean
-    public INotificationServicePort iNotificationServicePort (ITwilioPort iTwilioPort){
-        return new NotificationUseCase(iTwilioPort);
+    public INotificationServicePort iNotificationServicePort (ITwilioPort iTwilioPort, INotificationPersistencePort iNotificationPersistencePort){
+        return new NotificationUseCase(iNotificationPersistencePort,iTwilioPort);
     }
 }

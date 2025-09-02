@@ -18,6 +18,9 @@ public class ConstantsErrorMessages {
     public static final String ERROR_TO_SEND_SMS = "There was an error sending the SMS";
     public static final String SMS_SENT_SUCCESSFULLY = "SMS sent successfully";
     public static final String YOUR_ORDER_IS_READY = "Your order is ready. Use the following PIN to collect it: ";
+    public static final String ID_REQUIRED = "ID is required";
+    public static final String ID_GREATER_THAN_ZERO = "ID must be greater than zero";
+    public static final String NOTIFICATION_NOT_FOUND = "Notification not found";
 
     private ConstantsErrorMessages() {
     }

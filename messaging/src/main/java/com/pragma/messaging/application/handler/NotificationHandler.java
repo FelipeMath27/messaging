@@ -19,7 +19,6 @@ public class NotificationHandler implements INotificationHandler{
     private final INotificationResponseMapper iNotificationResponseMapper;
     private final INotificationServicePort iNotificationServicePort;
 
-
     @Override
     public NotificationDTOResponse sendNotification(NotificationDTORequest notificationDTORequest) {
         return iNotificationResponseMapper.toResponse(
@@ -27,5 +26,10 @@ public class NotificationHandler implements INotificationHandler{
                         iNotificationRequestMapper.toNotification(notificationDTORequest)
                 )
         );
+    }
+
+    @Override
+    public NotificationDTOResponse getNotificationByPhone(String phoneNumber) {
+        return iNotificationResponseMapper.toResponse(iNotificationServicePort.getNotification(phoneNumber));
     }
 }

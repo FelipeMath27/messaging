@@ -5,4 +5,6 @@ import com.pragma.messaging.application.dto.NotificationDTOResponse;
 
 public interface INotificationHandler {
     NotificationDTOResponse sendNotification(NotificationDTORequest notificationDTORequest);
+
+    NotificationDTOResponse getNotificationByPhone(String phoneNumber);
 }

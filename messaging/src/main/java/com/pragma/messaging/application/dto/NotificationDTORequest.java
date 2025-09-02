@@ -1,9 +1,12 @@
 package com.pragma.messaging.application.dto;
 
+import com.pragma.messaging.domain.model.StatusPin;
 import com.pragma.messaging.domain.utils.ConstantsErrorMessages;
 import com.pragma.messaging.infrastructure.constant.ConstantGeneralMessage;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Positive;
 import lombok.*;
 
 @Getter
@@ -15,4 +18,9 @@ public class NotificationDTORequest {
     @NotBlank(message = ConstantsErrorMessages.CANT_BE_NULL)
     @Pattern(regexp = ConstantsErrorMessages.PHONE_REGEX, message = ConstantsErrorMessages.INVALID_PHONE_FORMAT)
     private String phoneNumber;
+
+    @NotNull(message = ConstantsErrorMessages.ID_REQUIRED)
+    @Positive(message = ConstantsErrorMessages.ID_GREATER_THAN_ZERO)
+    private Long idOrder;
+
 }
