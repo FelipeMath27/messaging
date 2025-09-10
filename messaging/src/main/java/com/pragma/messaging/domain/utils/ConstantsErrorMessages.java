@@ -21,6 +21,7 @@ public class ConstantsErrorMessages {
     public static final String ID_REQUIRED = "ID is required";
     public static final String ID_GREATER_THAN_ZERO = "ID must be greater than zero";
     public static final String NOTIFICATION_NOT_FOUND = "Notification not found";
+    public static final String PIN_HAS_EXPIRED = "PIN HAS EXPIRED";
 
     private ConstantsErrorMessages() {
     }

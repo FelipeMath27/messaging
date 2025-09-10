@@ -13,6 +13,8 @@ public class ConstantGeneralMessage {
     public static final Object EXPIRED_TOKEN = "Expired token";
     public static final String ERROR_TO_VALIDATE_TOKEN = "Error to validate token";
 
+
+
     public ConstantGeneralMessage(){}
 }
 
